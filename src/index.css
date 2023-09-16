@@ -377,6 +377,7 @@ Sidebar
   top: 1rem;
   right: 1rem;
   font-size: 2rem;
+  cursor: pointer;
   background: transparent;
   border-color: transparent;
   color: var(--primary-500);
@@ -413,5 +414,34 @@ Sidebar
 @media screen and (min-width: 992px) {
   .sidebar {
     display: none;
+  }
+}
+/*
+============= 
+Nav Links
+=============== 
+*/
+.nav-links {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  .nav-link {
+    padding: 0 1rem;
+    color: var(--white);
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.25rem;
+    letter-spacing: var(--letterSpacing);
+    cursor: pointer;
+    text-transform: capitalize;
   }
 }
