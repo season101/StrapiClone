@@ -3,9 +3,16 @@ import { FaBars } from 'react-icons/fa';
 import Navlinks from './Navlinks';
 import { useGlobalContext } from './context';
 const Navbar = () => {
-  const { openSidebar } = useGlobalContext();
+  const { openSidebar, setPageId } = useGlobalContext();
+
+  const handleSubmenu = (e) => {
+    if (!e.target.classList.contains('nav-link')) {
+      setPageId(null);
+    }
+  };
+
   return (
-    <nav>
+    <nav onMouseOver={handleSubmenu}>
       <div className="nav-center">
         <h3 className="logo">Strapi</h3>
         <button className="toggle-btn" onClick={openSidebar}>
